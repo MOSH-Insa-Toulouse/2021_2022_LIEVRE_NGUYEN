@@ -1,5 +1,0 @@
-(sym_lib_table
-  (lib (name "RN2483-I_RM095")(type "Legacy")(uri "C:/Users/nguye/Downloads/RN2483-I_RM095/RN2483-I_RM095.lib")(options "")(descr ""))
-  (lib (name "TO-5_sensor_gas")(type "KiCad")(uri "C:/Users/nguye/Documents/TO-5_sensor_gas.kicad_sym")(options "")(descr ""))
-  (lib (name "ESP32-DEVKITC-32D")(type "Legacy")(uri "C:/Users/nguye/Downloads/ESP32-DEVKITC-32D/ESP32-DEVKITC-32D.lib")(options "")(descr ""))
-)

@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "LTC1050ACN8_PBF")(type "Legacy")(uri "${KIPRJMOD}/libraries/LTC1050ACN8_PBF/LTC1050ACN8_PBF.lib")(options "")(descr ""))
+  (lib (name "2N2222")(type "Legacy")(uri "${KIPRJMOD}/libraries/2N2222/2N2222.lib")(options "")(descr ""))
+  (lib (name "110990030")(type "Legacy")(uri "${KIPRJMOD}/libraries/Conn_grove/110990030.lib")(options "")(descr ""))
+)

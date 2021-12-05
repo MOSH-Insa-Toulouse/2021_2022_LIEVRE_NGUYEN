@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name "Socket_Arduino_Uno")(type "KiCad")(uri "$(KIPRJMOD)/Socket_Arduino_Uno.pretty")(options "")(descr ""))
+  (lib (name "libraries")(type "KiCad")(uri "${KIPRJMOD}/libraries")(options "")(descr ""))
+  (lib (name "2N2222")(type "KiCad")(uri "${KIPRJMOD}/libraries/2N2222")(options "")(descr ""))
+  (lib (name "Conn_grove")(type "KiCad")(uri "${KIPRJMOD}/libraries/Conn_grove")(options "")(descr ""))
+)
