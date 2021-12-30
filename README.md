@@ -10,6 +10,8 @@ Then, we designed the PCB and the code to use the sensor.
 * 5 [KiCad](#p5) 
 * 6 [Node-RED](#p6)
 * 7 [Datasheet](#p7)
+* 8 [Possible improvements](#p8)
+* 9 [Contacts](#p9)
 
 ## Introduction <a name="intro"></a>
 
@@ -182,3 +184,16 @@ You can find the flow's code [here](LINK FLOW NODE RED)
 ## Datasheet <a name="p7"></a>
 
 You can find the datasheet [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Datasheet_AIME_GSWO3.pdf)
+
+## Possible improvements <a name="p8"></a>
+
+
+## Contacts <a name="p9"></a>
+
+**Agathe LIEVRE & Assia NGUYEN**
+
+- 5th year students from INSA Toulouse
+
+- _lievre@insa-toulouse.fr_
+
+- _asnguyen@insa-toulouse.fr_
