@@ -131,7 +131,9 @@ void loop()
 }
 ```
 
-You can find the codes [here](LINK CODE)
+You can find the codes:
+- [here for Tx](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_verte/Lora_Tx_mod2mod)
+- [here for Rx](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_verte/Lora_Rx_mod2mod)
 
 ## LoraWAN <a name="p3"></a>
 
@@ -148,13 +150,26 @@ To configure your TTN account, you can follow these steps:
 
 We then proceeded to conceive the PCB shield.
 The first thing to do is to draw the circuit. We used the following circuit:
-SCREEN CIRCUIT
+![Schematic_PCB](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/Schematic_PCB.PNG)
 
 Then, we needed the footprint of each elements.
-SCREEN FOOTPRINT
+<img src="/Documents/Pictures/S_BUZZER.PNG"> <img src="/Documents/Pictures/FP_BUZZER.PNG">
+<img src="/Documents/Pictures/S_CAPA.PNG"> <img src="/Documents/Pictures/FP_CAPAR.PNG">
+<img src="/Documents/Pictures/S_CONN.PNG"> <img src="/Documents/Pictures/FP_CONN.PNG"> 
+<img src="/Documents/Pictures/S_CONN_GROVE.PNG"> <img src="/Documents/Pictures/FP_CONN_GROVE.PNG"> 
+<img src="/Documents/Pictures/S_ESP32.PNG"> <img src="/Documents/Pictures/FP_ESP32.PNG">
+<img src="/Documents/Pictures/S_GSWO3.PNG"> <img src="/Documents/Pictures/FP_GSWO3.PNG">
+<img src="/Documents/Pictures/S_LED.PNG"> <img src="/Documents/Pictures/FP_LED.PNG">
+<img src="/Documents/Pictures/S_LTC.PNG"> <img src="/Documents/Pictures/FP_LTC.PNG">
+<img src="/Documents/Pictures/S_R.PNG"> <img src="/Documents/Pictures/FP_R.PNG">
+<img src="/Documents/Pictures/S_SW.PNG"> <img src="/Documents/Pictures/FP_SW.PNG">
+<img src="/Documents/Pictures/S_TRANS.PNG"> <img src="/Documents/Pictures/FP_TRANS.PNG">
 
 Finally, we designed the PCB. Here, you have a picture of the schematics and the 3D view:
-SCREEN PCB + 3D
+![PCB](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/PCB.PNG)
+![PCB_3D](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/PCB_3D.PNG)
+![PCB_3D_FACE](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/PCB_3D_FACE.PNG)
+![PCB_3D_DOS](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/PCB_3D_DOS.PNG)
 
 ## Node-RED <a name="p6"></a>
 
@@ -166,4 +181,4 @@ You can find the flow's code [here](LINK FLOW NODE RED)
 
 ## Datasheet <a name="p7"></a>
 
-You can find the datasheet [here](LINK DATASHEET)
+You can find the datasheet [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Datasheet_AIME_GSWO3.pdf)
