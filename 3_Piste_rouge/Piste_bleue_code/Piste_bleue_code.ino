@@ -7,7 +7,7 @@
 #define INTERRUPT_PIN 12 //Pin d'interruption du capteur de gaz grove
 #define PWM_PIN 16   //Pin de sortie de la commande PWM (vers transistor -> R_poly (barreau silicium))
 #define GROVE_PIN 4  //Signal d'entree du capteur grove 
-#define CMD_R_POLY 16 //Pin de la sortie de commande de la resistance de chauffe (barreau silicium)
+#define CMD_R_POLY 7 //Pin de la sortie de commande de la resistance de chauffe (barreau silicium)
 #define ADC_SENSOR 33 // Pin d'entree du signal du capteur de gaz (AIME)
 #define ADC_R_ALU 27 //Pin d'entree de la resistance d'aluminium (capteur de temperature)
 #define BUZZER_PIN 17  //Pin de sortie du buzzer
@@ -16,11 +16,12 @@
 double Kp;
 double Ki;
 double Kd;     //Ponderations du PID (à definir en observant la reponse du systeme)
-float e_t = 0; //erreur à t
-float e_t_1 = 0; //erreur à t-1
-int t_1 = 0; //timestamp 1
-int t_2 = 0; //timestamp 2
-int delta_t=t_2 - t_1; 
+float e_curr = 0; //erreur à t
+float e_prev = 0; //erreur à t-1
+int prev_T = 0; //timestamp 1
+int curr_T = 0; //timestamp 2
+int delta_t=curr_T - prev_T; 
+float target_temp = 200; // Température de R_poly voulue
 
 
 //Paramètres TTN
@@ -35,7 +36,7 @@ int b; // R_aluminium = a * T(Kelvin) + b
 // Pour la commande PWM de la résistance de chauffe
 int duty_cycle; //duty cycle du signal PWM pour la commande de la résistance de chauffe
 const uint32_t PWM_fq = 20000;
-const uint32_t ledChannel = 0;
+const uint32_t PWMChannel = 0;
 const uint32_t resolution = 8;
 
 // Pour le capteur grove
@@ -123,7 +124,7 @@ uint32_t read_AIME(){
 //Lecture de la résistance du capteur de température
 uint32_t read_r_alu (){
   int adc_R_alu = analogRead(ADC_R_ALU);
-  float adc_R_alu_volt=(float)ADC_R_ALU/4096*5.0;
+  float adc_R_alu_volt=(float)ADC_R_ALU/4096*3.3;
   float R_Alu=adc_R_alu_volt*R6/(3.3-adc_R_alu_volt);
   return R_Alu;
 }
@@ -139,13 +140,13 @@ float read_temperature(){
 //Correcteur PID pour maintenir la température du R_poly à 200 °C
 int corr_PID(){
 
-  int t_2 = micros();
-  e_t = 200 - read_temperature();
-  float e_P = Kp * e_t;
-  float e_I = Ki * e_t * delta_t; 
-  float e_D = Kd * (e_t - e_t_1) / (delta_t);
-  t_1 = t_2;
-  e_t_1 = e_t;
+  int curr_T = micros();
+  e_curr = target_temp - read_temperature();
+  float e_P = Kp * e_curr; 
+  float e_I = Ki * (e_I + e_curr * delta_t); 
+  float e_D = Kd * (e_curr - e_prev) / (delta_t);
+  prev_T = curr_T;
+  e_prev = e_curr;
   uint8_t C = e_P + e_D + e_I;
   if(C > 255) {
     C = 255; //Pour borner la correction entre 0 et 255
@@ -157,14 +158,14 @@ int corr_PID(){
 //Configuration PWM
 void config_PWM(){
   pinMode(PWM_PIN,OUTPUT);
-  ledcSetup(ledChannel, PWM_fq, resolution);
-  ledcAttachPin(PWM_PIN, ledChannel); //Liaison de la channel du Timer avec la pin PWM
+  ledcSetup(PWMChannel, PWM_fq, resolution);
+  ledcAttachPin(PWM_PIN, PWMChannel); //Liaison de la channel avec le pin PWM pour le contrôler
 }
 
 //Commande de la resistance d'alu de chauffe en PWM
 void cmd_PWM_Poly(){
   int duty_cycle=corr_PID();
-  ledcWrite(ledChannel,duty_cycle);
+  ledcWrite(PWMChannel,duty_cycle);
 }
 
 
@@ -183,6 +184,7 @@ void setup() {
 
 void loop() {
 
+  cmd_PWM_Poly();
   //Encode int as bytes
   byte payload[4]; //Payload a envoyer sur TTN
 
