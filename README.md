@@ -154,18 +154,18 @@ We then proceeded to conceive the PCB shield.
 The first thing to do is to draw the circuit. We used the following circuit:
 ![Schematic_PCB](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/Schematic_PCB.PNG)
 
-Then, we needed the footprint of each elements. <br>
-<img src="/Documents/Pictures/S_BUZZER.PNG" width="400"> <img src="/Documents/Pictures/FP_BUZZER.PNG" width="400">
-<img src="/Documents/Pictures/S_CAPA.PNG" width="400"> <img src="/Documents/Pictures/FP_CAPA.PNG" width="400">
-<img src="/Documents/Pictures/S_CONN.PNG" width="400"> <img src="/Documents/Pictures/FP_CONN.PNG" width="400"> 
-<img src="/Documents/Pictures/S_CONN_GROVE.PNG" width="400"> <img src="/Documents/Pictures/FP_CONN_GROVE.PNG" width="400"> 
-<img src="/Documents/Pictures/S_ESP32.PNG" width="400"> <img src="/Documents/Pictures/FP_ESP32.PNG" width="400">
-<img src="/Documents/Pictures/S_GSWO3.PNG" width="400"> <img src="/Documents/Pictures/FP_GSWO3.PNG" width="400">
-<img src="/Documents/Pictures/S_LED.PNG" width="400"> <img src="/Documents/Pictures/FP_LED.PNG" width="400">
-<img src="/Documents/Pictures/S_LTC.PNG" width="400"> <img src="/Documents/Pictures/FP_LTC.PNG" width="400">
-<img src="/Documents/Pictures/S_R.PNG" width="400"> <img src="/Documents/Pictures/FP_R.PNG" width="400">
-<img src="/Documents/Pictures/S_SW.PNG" width="400"> <img src="/Documents/Pictures/FP_SW.PNG" width="400">
-<img src="/Documents/Pictures/S_TRANS.PNG" width="400"> <img src="/Documents/Pictures/FP_TRANS.PNG" width="400">
+Then, we needed the footprint of each elements. <br> <br>
+<img src="/Documents/Pictures/S_BUZZER.PNG" width="200"> <img src="/Documents/Pictures/FP_BUZZER.PNG" width="400">
+<img src="/Documents/Pictures/S_CAPA.PNG" width="200"> <img src="/Documents/Pictures/FP_CAPA.PNG" width="400">
+<img src="/Documents/Pictures/S_CONN.PNG" width="200"> <img src="/Documents/Pictures/FP_CONN.PNG" width="400"> 
+<img src="/Documents/Pictures/S_CONN_GROVE.PNG" width="200"> <img src="/Documents/Pictures/FP_CONN_GROVE.PNG" width="400"> 
+<img src="/Documents/Pictures/S_ESP32.PNG" width="200"> <img src="/Documents/Pictures/FP_ESP32.PNG" width="150">
+<img src="/Documents/Pictures/S_GSWO3.PNG" width="200"> <img src="/Documents/Pictures/FP_GSWO3.PNG" width="150">
+<img src="/Documents/Pictures/S_LED.PNG" width="200"> <img src="/Documents/Pictures/FP_LED.PNG" width="400">
+<img src="/Documents/Pictures/S_LTC.PNG" width="200"> <img src="/Documents/Pictures/FP_LTC.PNG" width="150">
+<img src="/Documents/Pictures/S_R.PNG" width="200"> <img src="/Documents/Pictures/FP_R.PNG" width="400">
+<img src="/Documents/Pictures/S_SW.PNG" width="200"> <img src="/Documents/Pictures/FP_SW.PNG" width="400">
+<img src="/Documents/Pictures/S_TRANS.PNG" width="200"> <img src="/Documents/Pictures/FP_TRANS.PNG" width="200">
 
 Finally, we designed the PCB. Here, you have a picture of the schematics and the 3D view:
 ![PCB](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/PCB.PNG)
