@@ -155,17 +155,28 @@ The first thing to do is to draw the circuit. We used the following circuit:
 ![Schematic_PCB](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/Schematic_PCB.PNG)
 
 Then, we needed the footprint of each elements. <br> <br>
-<img src="/Documents/Pictures/S_BUZZER.PNG" height="150"> <img src="/Documents/Pictures/FP_BUZZER.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_CAPA.PNG" height="150"> <img src="/Documents/Pictures/FP_CAPA.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_CONN.PNG" height="150"> <img src="/Documents/Pictures/FP_CONN.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_CONN_GROVE.PNG" height="150"> <img src="/Documents/Pictures/FP_CONN_GROVE.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_ESP32.PNG" height="150"> <img src="/Documents/Pictures/FP_ESP32.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_GSWO3.PNG" height="150"> <img src="/Documents/Pictures/FP_GSWO3.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_LED.PNG" height="150"> <img src="/Documents/Pictures/FP_LED.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_LTC.PNG" height="150"> <img src="/Documents/Pictures/FP_LTC.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_R.PNG" height="150"> <img src="/Documents/Pictures/FP_R.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_SW.PNG" height="150"> <img src="/Documents/Pictures/FP_SW.PNG" height="150"> <br>
-<img src="/Documents/Pictures/S_TRANS.PNG" height="150"> <img src="/Documents/Pictures/FP_TRANS.PNG" height="150"> <br>
+- Buzzer
+<img src="/Documents/Pictures/S_BUZZER.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_BUZZER.PNG" height="150"> <br>
+- Capacitor
+<img src="/Documents/Pictures/S_CAPA.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_CAPA.PNG" height="150"> <br>
+- Connector 01x08
+<img src="/Documents/Pictures/S_CONN.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_CONN.PNG" height="150"> <br>
+- Connector Grove 01x04
+<img src="/Documents/Pictures/S_CONN_GROVE.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_CONN_GROVE.PNG" height="150"> <br>
+- ESP32
+<img src="/Documents/Pictures/S_ESP32.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_ESP32.PNG" height="150"> <br>
+- Gas Sensor
+<img src="/Documents/Pictures/S_GSWO3.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_GSWO3.PNG" height="150"> <br>
+- LED
+<img src="/Documents/Pictures/S_LED.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_LED.PNG" height="150"> <br>
+- LTC
+<img src="/Documents/Pictures/S_LTC.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_LTC.PNG" height="150"> <br>
+- Resistor
+<img src="/Documents/Pictures/S_R.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_R.PNG" height="150" width="400"> <br>
+- Switch
+<img src="/Documents/Pictures/S_SW.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_SW.PNG" height="150"> <br>
+- Transistor
+<img src="/Documents/Pictures/S_TRANS.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_TRANS.PNG" height="150"> <br>
 
 Finally, we designed the PCB. Here, you have a picture of the schematics and the 3D view:
 ![PCB](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/PCB.PNG)
