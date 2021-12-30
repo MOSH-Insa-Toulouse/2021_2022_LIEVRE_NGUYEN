@@ -154,9 +154,9 @@ We then proceeded to conceive the PCB shield.
 The first thing to do is to draw the circuit. We used the following circuit:
 ![Schematic_PCB](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/Schematic_PCB.PNG)
 
-Then, we needed the footprint of each elements.
+Then, we needed the footprint of each elements. <br>
 <img src="/Documents/Pictures/S_BUZZER.PNG" width="400"> <img src="/Documents/Pictures/FP_BUZZER.PNG" width="400">
-<img src="/Documents/Pictures/S_CAPA.PNG" width="400"> <img src="/Documents/Pictures/FP_CAPAR.PNG" width="400">
+<img src="/Documents/Pictures/S_CAPA.PNG" width="400"> <img src="/Documents/Pictures/FP_CAPA.PNG" width="400">
 <img src="/Documents/Pictures/S_CONN.PNG" width="400"> <img src="/Documents/Pictures/FP_CONN.PNG" width="400"> 
 <img src="/Documents/Pictures/S_CONN_GROVE.PNG" width="400"> <img src="/Documents/Pictures/FP_CONN_GROVE.PNG" width="400"> 
 <img src="/Documents/Pictures/S_ESP32.PNG" width="400"> <img src="/Documents/Pictures/FP_ESP32.PNG" width="400">
