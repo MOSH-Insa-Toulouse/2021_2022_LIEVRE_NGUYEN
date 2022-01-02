@@ -1,6 +1,6 @@
 # 2021_2022_LIEVRE_NGUYEN
 This project is part of the 5ISS year formation at INSA Toulouse. We created a nanoparticle gas sensor in the AIME laboratory at INSA Toulouse.
-Then, we designed the PCB and the code to use the sensor.
+Then, we designed the PCB and the code to use the sensor and display its data on a dashboard.
 
 ## SOMMAIRE 
 * 1 [Introduction](#intro)
@@ -16,10 +16,10 @@ Then, we designed the PCB and the code to use the sensor.
 ## Introduction <a name="intro"></a>
 
 This project allowed us to go further in the development of our sensor. 
-Indeed, we can now use it with a shield, connect it to TTN and see the data on a Node-RED dashboard.
+Indeed, we can now use it with a shield, connect it to TTN and see the data on a Node-RED dashboard. The arduino code used to retrieve and process the data was used for both the AIME gaz sensor and the grove sensor given to us to test out. We used a ESP32 as a microcontroller.
 Here, you will find :
 
-- [x] The code of the sensor to collect data, alert the user and connect it to TTN.
+- [x] The arduino code of the sensor to collect data, alert the user and connect it to TTN.
 - [x] The PCB shield along with the KiCad project.
 - [x] The Node-RED flow for the dashboard.
 - [x] The sensor's datasheet.
