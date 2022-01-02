@@ -16,7 +16,8 @@ Then, we designed the PCB and the code to use the sensor and display its data on
 ## Introduction <a name="intro"></a>
 
 This project allowed us to go further in the development of our sensor. 
-Indeed, we can now use it with a shield, connect it to TTN and see the data on a Node-RED dashboard. The arduino code used to retrieve and process the data was used for both the AIME gaz sensor and the grove sensor given to us to test out. We used a ESP32 as a microcontroller.
+Indeed, we can now use it with a shield, connect it to TTN and see the data on a Node-RED dashboard. The arduino code used to retrieve and process the data was adapted for both the AIME gaz sensor and the industrial grove sensor given to us. We used a ESP32 as a microcontroller.
+
 Here, you will find :
 
 - [x] The arduino code of the sensor to collect data, alert the user and connect it to TTN.
