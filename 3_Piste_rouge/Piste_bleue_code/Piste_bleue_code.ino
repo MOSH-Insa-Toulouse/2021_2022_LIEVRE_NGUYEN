@@ -13,14 +13,10 @@
 #define BUZZER_PIN 17  //Pin de sortie du buzzer
 
 //Correcteur PID
-double Kp;
-double Ki;
-double Kd;     //Ponderations du PID (à definir en observant la reponse du systeme)
 float e_curr = 0; //erreur à t
 float e_prev = 0; //erreur à t-1
 int prev_T = 0; //timestamp 1
 int curr_T = 0; //timestamp 2
-int delta_t=curr_T - prev_T; 
 float target_temp = 200; // Température de R_poly voulue
 
 
@@ -50,7 +46,12 @@ uint32_t grove_data; //données capteur grove
 // Pour le capteur AIME
 float sensor_aime_volt; //conversion en volt de l'entree du signal du capteur AIME
 uint32_t AIME_data;  //données capteur AIME
-int R1, R2, R3, R4, R5, R6; //resistances du circuit de conditionnement (cf circuit Kicad)
+int R1 = 100000;
+int R2 = 1000;
+int R3 = 100000;
+int R4;
+int R5 = 10000;
+int R6; //resistances du circuit de conditionnement (cf circuit Kicad)
 int Vcc; // à definir en fonction des grandeurs electriques voulues
 
 
@@ -99,6 +100,15 @@ void init_Lora(){
 //Gestion de l'interruption du capteur
 void manage_interrupt(){
   digitalWrite(BUZZER_PIN, 1); //active l'alarme à la detection de gaz
+  grove_data=read_grove();
+  AIME_data=read_AIME();
+  
+  byte payload[4]; //Payload a envoyer sur TTN
+  payload[0] = highByte(grove_data);
+  payload[1] = lowByte(grove_data);
+  payload[2]=highByte(AIME_data);  
+  payload[1]=lowByte(AIME_data);
+  lora.txBytes(payload,4); 
 }
 
 //Lecture du capteur grove
@@ -138,13 +148,14 @@ float read_temperature(){
 }
 
 //Correcteur PID pour maintenir la température du R_poly à 200 °C
-int corr_PID(){
+int corr_PID(int Kp, int Ki, int Kd){
 
   int curr_T = micros();
-  e_curr = target_temp - read_temperature();
-  float e_P = Kp * e_curr; 
-  float e_I = Ki * (e_I + e_curr * delta_t); 
-  float e_D = Kd * (e_curr - e_prev) / (delta_t);
+  float delta_t=((float)(curr_T - prev_T))/1E6; 
+  e_curr = target_temp - read_temperature(); 
+  float e_P = Kp * e_curr; //partie proportionnelle
+  float e_I = Ki * (e_I + e_curr * delta_t); //partie intégrale
+  float e_D = Kd * (e_curr - e_prev) / (delta_t); //partie dérivatrice
   prev_T = curr_T;
   e_prev = e_curr;
   uint8_t C = e_P + e_D + e_I;
@@ -164,7 +175,7 @@ void config_PWM(){
 
 //Commande de la resistance d'alu de chauffe en PWM
 void cmd_PWM_Poly(){
-  int duty_cycle=corr_PID();
+  int duty_cycle=corr_PID(1,0,0);
   ledcWrite(PWMChannel,duty_cycle);
 }
 
@@ -178,6 +189,7 @@ void setup() {
     Serial2.print("sys get hwei\r\n"); // recuperation du HWEUI
     Serial.println(Serial2.readStringUntil('\n'));
   }
+  digitalWrite(BUZZER_PIN, 0); //inititialisation du buzzer
   attachInterrupt(INTERRUPT_PIN, manage_interrupt, LOW); //Appel de la fonction d'interruption
   
 }
@@ -185,15 +197,4 @@ void setup() {
 void loop() {
 
   cmd_PWM_Poly();
-  //Encode int as bytes
-  byte payload[4]; //Payload a envoyer sur TTN
-
-  grove_data = read_grove();
-  AIME_data = read_AIME();
-  
-  payload[0] = highByte(grove_data);
-  payload[1] = lowByte(grove_data);
-  payload[2]=highByte(AIME_data);  
-  payload[1]=lowByte(AIME_data);
-  lora.txBytes(payload, 4); //envoi sur TTN
 }
