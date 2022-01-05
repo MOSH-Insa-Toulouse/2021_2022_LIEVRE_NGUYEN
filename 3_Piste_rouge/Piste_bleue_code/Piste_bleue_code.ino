@@ -12,6 +12,9 @@
 #define ADC_R_ALU 27 //Pin d'entree de la resistance d'aluminium (capteur de temperature)
 #define BUZZER_PIN 17  //Pin de sortie du buzzer
 
+
+#define gaz_threshold 1E8
+ 
 //Correcteur PID
 float e_curr = 0; //erreur à t
 float e_prev = 0; //erreur à t-1
@@ -97,20 +100,6 @@ void init_Lora(){
   Serial.println("Successfully joined TTN");
 }
 
-//Gestion de l'interruption du capteur
-void manage_interrupt(){
-  digitalWrite(BUZZER_PIN, 1); //active l'alarme à la detection de gaz
-  grove_data=read_grove();
-  AIME_data=read_AIME();
-  
-  byte payload[4]; //Payload a envoyer sur TTN
-  payload[0] = highByte(grove_data);
-  payload[1] = lowByte(grove_data);
-  payload[2]=highByte(AIME_data);  
-  payload[1]=lowByte(AIME_data);
-  lora.txBytes(payload,4); 
-}
-
 //Lecture du capteur grove
 uint32_t read_grove() 
 {
@@ -153,12 +142,12 @@ int corr_PID(int Kp, int Ki, int Kd){
   int curr_T = micros();
   float delta_t=((float)(curr_T - prev_T))/1E6; 
   e_curr = target_temp - read_temperature(); 
-  float e_P = Kp * e_curr; //partie proportionnelle
-  float e_I = Ki * (e_I + e_curr * delta_t); //partie intégrale
-  float e_D = Kd * (e_curr - e_prev) / (delta_t); //partie dérivatrice
+  float e_P = e_curr; //partie proportionnelle
+  float e_I = (e_I + e_curr * delta_t); //partie intégrale
+  float e_D = (e_curr - e_prev) / (delta_t); //partie dérivatrice
   prev_T = curr_T;
   e_prev = e_curr;
-  uint8_t C = e_P + e_D + e_I;
+  uint8_t C = Kp * e_P + Ki * e_I+ Kd * e_D;
   if(C > 255) {
     C = 255; //Pour borner la correction entre 0 et 255
   }
@@ -190,11 +179,30 @@ void setup() {
     Serial.println(Serial2.readStringUntil('\n'));
   }
   digitalWrite(BUZZER_PIN, 0); //inititialisation du buzzer
-  attachInterrupt(INTERRUPT_PIN, manage_interrupt, LOW); //Appel de la fonction d'interruption
   
 }
 
 void loop() {
 
   cmd_PWM_Poly();
+  grove_data=read_grove();
+  AIME_data=read_AIME();
+  if(AIME_data > gaz_threshold){
+
+    
+    byte payload[4]; //Payload a envoyer sur TTN
+    payload[0] = highByte(grove_data);
+    payload[1] = lowByte(grove_data);
+    payload[2]=highByte(AIME_data);  
+    payload[1]=lowByte(AIME_data);
+    lora.txBytes(payload,4); 
+    
+    for (int i=0;i<5; i++){
+      digitalWrite(BUZZER_PIN, 1); //active l'alarme à la detection de gaz
+      delay(10000);
+    }
+    digitalWrite(BUZZER_PIN, 0); //inititialisation du buzzer
+  
+  }
+  
 }
