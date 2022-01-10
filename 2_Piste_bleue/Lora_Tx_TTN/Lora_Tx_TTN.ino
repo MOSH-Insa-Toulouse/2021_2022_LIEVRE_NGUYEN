@@ -40,7 +40,7 @@ void initialize_radio()
   bool join_result = false;
 
   //ABP: initABP(String addr, String AppSKey, String NwkSKey);
-  //join_result = lora.initABP("260BC0E0", "9AB480190B05E8A8186F182D04FE2300", "91077773C17E66C8E99DAA4FE049DD7C");
+  //join_result = lora.initABP("260B700E", "55EE6FD2D022FD7B3DB52CE465CD60F0", "EE95FA7D5362AA4A050B428B5F9A0BC2");
 
   //OTAA: initOTAA(String AppEUI, String AppKey);
   join_result = lora.initOTAA("0000000000000000", "27C93ED04348754075826C46CE00F53D");

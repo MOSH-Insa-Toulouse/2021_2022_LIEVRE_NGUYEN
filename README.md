@@ -3,15 +3,15 @@ This project is part of the 5ISS year formation at INSA Toulouse. We created a n
 Then, we designed the PCB and the code to use the sensor.
 
 ## SOMMAIRE 
-* 1 [Introduction](#intro)
-* 2 [Lora](#p2)
-* 3 [LoraWAN](#p3)
-* 4 [TTN](#p4)
-* 5 [KiCad](#p5) 
-* 6 [Node-RED](#p6)
-* 7 [Datasheet](#p7)
-* 8 [Possible improvements](#p8)
-* 9 [Contacts](#p9)
+1. [Introduction](#intro)
+2. [Lora](#p2)
+3. [LoraWAN](#p3)
+4. [TTN](#p4)
+5. [KiCad](#p5) 
+6. [Node-RED](#p6)
+7. [Datasheet](#p7)
+8. [Possible improvements](#p8)
+9. [Contacts](#p9)
 
 ## Introduction <a name="intro"></a>
 
@@ -145,8 +145,8 @@ Gas sensor v1.5 (MQ2)
 ## TTN <a name="p4"></a>
 
 To configure your TTN account, you can follow these steps:
-1.
-2.
+1. step1
+2. step2
 
 ## KiCad <a name="p5"></a>
 
@@ -189,7 +189,7 @@ Then, we needed the footprint of each elements. <br> <br>
 
 - Resistor
 
-<img src="/Documents/Pictures/S_R.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_R.PNG" height="150" width="500"> <br>
+<img src="/Documents/Pictures/S_R.PNG" height="150"> &emsp; <img src="/Documents/Pictures/FP_R.PNG" height="150" width="600"> <br>
 
 - Switch
 
