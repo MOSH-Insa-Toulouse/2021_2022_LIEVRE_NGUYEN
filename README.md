@@ -143,7 +143,7 @@ You can find the codes:
 In this part, we implemented the full arduino code that retrieves and sends to TTN via LoraWAN the value of both the grove and AIME sensor. 
 We also read the raw value of the resistor (R_alu) that serves as a temperature sensor. By using the R_alu value, we then deduced the temperature.
 We also implemented a PID controller to maintain the temperature of the silicium resistor R_Poly to a temperature of 200°C. To do so, we use the PID controller to generate a duty cycle that is then entered as a parameter for the PWM signal that controls the silicium rod.
-<img src="/Documents/Pictures/pid_control.png" height="50">
+<img src="/Documents/Pictures/pid_control.png" height="150"><br>
 The code corresponding to this part is the following:
 ``` c++
 #include <Arduino.h>
