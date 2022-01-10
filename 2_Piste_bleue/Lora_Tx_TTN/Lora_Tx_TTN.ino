@@ -96,7 +96,7 @@ void loop()
 
   //Encode int as bytes
   ratio_int = (uint32_t) ratio;
-  byte payload[2];
+  byte payload[2]; //Payload a envoyer sur TTN
 
   payload[0] = highByte(ratio_int);
   payload[1] = lowByte(ratio_int);
