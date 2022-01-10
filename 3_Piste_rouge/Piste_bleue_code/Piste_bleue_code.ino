@@ -162,7 +162,7 @@ void config_PWM(){
   ledcAttachPin(PWM_PIN, PWMChannel); //Liaison de la channel avec le pin PWM pour le contrôler
 }
 
-//Commande de la resistance d'alu de chauffe en PWM
+//Commande de la resistance de chauffe en PWM
 void cmd_PWM_Poly(){
   int duty_cycle=corr_PID(1,0,0);
   ledcWrite(PWMChannel,duty_cycle);
