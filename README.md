@@ -140,6 +140,12 @@ You can find the codes:
 
 ## LoraWAN <a name="p3"></a>
 
+In this part, we implemented the full arduino code that retrieves and sends to TTN via LoraWAN the value of both the grove and AIME sensor. 
+We also read the raw value of the resistor (R_alu) that serves as a temperature sensor. By using the value, we then deduced the temperature.
+We also implemented a PID corrector to maintain the temperature of the silicium resistor R_Poly to a temperature of 200°C. 
+
+You can find the code
+- [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_rouge/Piste_bleue_code)
 "mac tx cnf 81"+ hexa
 Gas sensor v1.5 (MQ2)
 
