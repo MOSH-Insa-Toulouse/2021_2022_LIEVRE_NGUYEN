@@ -13,7 +13,7 @@
 #define BUZZER_PIN 17  //Pin de sortie du buzzer
 
 
-#define gaz_threshold 1E8
+#define gaz_threshold 1E8 //Valeur seuil pour déclencher l'alarme (buzzer)
  
 //Correcteur PID
 float e_curr = 0; //erreur à t
