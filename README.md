@@ -155,7 +155,7 @@ In this part, we implemented the full arduino code that retrieves and sends to T
 We also read the raw value of the resistor (R_alu) that serves as a temperature sensor. By using the R_alu value, we then deduced the temperature.
 We also implemented a PID controller to maintain the temperature of the silicium resistor R_Poly to a temperature of 200°C. To do so, we use the PID controller to generate a duty cycle that is then entered as a parameter for the PWM signal that controls the silicium rod.
 
-<img src="/Documents/Pictures/pid_control.png" height="150"> <br>
+<img src="/Documents/Pictures/pid_control.png" height="500"> <br>
 
 <details>
   <summary><b>You can find the code directly here</b></summary>
@@ -389,9 +389,9 @@ You can see that we received live data:
 
 ![TTN_livedata](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/TTN_livedata.PNG)
 
-We also added a payload formatter:
+We also added a payload formatter: <br>
 
-![TTN_payload_formatter](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/TTN_payload_formatter.PNG)
+<img src="/Documents/Pictures/TTN_payload_formatter.PNG" height="300"> <br>
 
 ## KiCad <a name="p5"></a>
 
