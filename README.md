@@ -39,7 +39,8 @@ To test it, we used a very simple circuit:
 <details>
   <summary><b>Tx :</b></summary>
    To send a message, you need to enter the following command : "radio tx" + hexa_msg
-``` c++
+
+```c++
   #include <Arduino.h>
   #include <HardwareSerial.h>
   #include "rn2xx3.h"
