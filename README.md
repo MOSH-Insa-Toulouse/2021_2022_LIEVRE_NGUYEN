@@ -157,10 +157,8 @@ We also implemented a PID controller to maintain the temperature of the silicium
 
 <img src="/Documents/Pictures/pid_control.png" height="150"> <br>
 
-The code corresponding to this part is the following:
-
 <details>
-  <summary><b>Tx :</b></summary>
+  <summary><b>You can find the code directly here</b></summary>
 
 ```c++
   #include <Arduino.h>
