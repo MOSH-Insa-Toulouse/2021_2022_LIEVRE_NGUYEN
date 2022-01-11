@@ -25,6 +25,9 @@ Here, you will find :
 - [x] The Node-RED flow for the dashboard.
 - [x] The sensor's datasheet.
 
+Here is a picture of our circuit:
+![ARDUINO](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/ARDUINO.PNG)
+
 ## Lora <a name="p2"></a>
 
 First, we tested the LoRa connexion with a small code.
@@ -361,9 +364,22 @@ You can find the code [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIE
 
 ## TTN <a name="p4"></a>
 
-To configure your TTN account, you can follow these steps:
-1. step1
-2. step2
+We configured an application whose overview is shown in the next picture:
+
+![TTN_overview](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/TTN_overview.PNG)
+
+In this app, we added a device:
+
+![TTN_device](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/TTN_device.PNG)
+![TTN_device2](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/TTN_device2.PNG)
+
+You can see that we received live data:
+
+![TTN_livedata](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/TTN_livedata.PNG)
+
+We also added a payload formatter:
+
+![TTN_payload_formatter](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/TTN_payload_formatter.PNG)
 
 ## KiCad <a name="p5"></a>
 
@@ -427,17 +443,17 @@ Finally, we designed the PCB. Here, you have a picture of the schematics and the
 Finally, we needed a dashboard to display the data andthe controls of the sensor. For that, we used to code in the LoRa part because since we didn't have the AIME sensor, we could only use the grove sensor.
 Here is a screenshot of the dashboard we created :
 
-<img src="/Documents/Pictures/NODERED_dashboard_ok.PNG" height="150"> <br>
+![NODERED_dashboard_ok](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/NODERED_dashboard_ok.PNG)
 
 It is a simple dashboard that displays the gaz level. In the next picture, you can see the "warning" mode:
 
-<img src="/Documents/Pictures/NODERED_dashboard_attention.PNG" height="150"> <br>
+![NODERED_dashboard_attention](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/NODERED_dashboard_attention.PNG)
 
 On the left, we also put a "Controls" module to implement a potential control of the sensor and/or the buzzer directly on the dashboard.
 
 Here is a screenshot of the Node-RED flow:
 
-<img src="/Documents/Pictures/NODERED_flow.PNG" height="150"> <br>
+![NODERED_flow](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/NODERED_flow.PNG)
 
 You can find the flow's code [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/4_Piste_noir/flows_AIMEGSWO3.json)
 
