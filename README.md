@@ -26,7 +26,7 @@ Here, you will find :
 - [x] The sensor's datasheet.
 
 Here is a picture of our circuit:
-![ARDUINO](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/ARDUINO.PNG)
+![ARDUINO](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/ARDUINO.jpg)
 
 ## Lora <a name="p2"></a>
 
