@@ -357,12 +357,7 @@ void loop() {
 ```
 
 
-You can find the code
-- [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_rouge/Piste_bleue_code)
-
-
-"mac tx cnf 81"+ hexa
-Gas sensor v1.5 (MQ2)
+You can find the code [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_rouge/Piste_bleue_code)
 
 ## TTN <a name="p4"></a>
 
@@ -431,9 +426,20 @@ Finally, we designed the PCB. Here, you have a picture of the schematics and the
 
 Finally, we needed a dashboard to display the data andthe controls of the sensor. For that, we used to code in the LoRa part because since we didn't have the AIME sensor, we could only use the grove sensor.
 Here is a screenshot of the dashboard we created :
-SCREEN DASHBOARD
 
-You can find the flow's code [here](LINK FLOW NODE RED)
+<img src="/Documents/Pictures/NODERED_dashboard_ok.PNG" height="150"> <br>
+
+It is a simple dashboard that displays the gaz level. In the next picture, you can see the "warning" mode:
+
+<img src="/Documents/Pictures/NODERED_dashboard_attention.PNG" height="150"> <br>
+
+On the left, we also put a "Controls" module to implement a potential control of the sensor and/or the buzzer directly on the dashboard.
+
+Here is a screenshot of the Node-RED flow:
+
+<img src="/Documents/Pictures/NODERED_flow.PNG" height="150"> <br>
+
+You can find the flow's code [here](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/4_Piste_noir/flows_AIMEGSWO3.json)
 
 ## Datasheet <a name="p7"></a>
 
@@ -441,6 +447,12 @@ You can find the datasheet [here](https://github.com/MOSH-Insa-Toulouse/2021_202
 
 ## Possible improvements <a name="p8"></a>
 
+Of course, there are a few improvements that could be done to this project:
+
+1. we are sad not to have been able to really make the PCB board because we put a lot of time and work to create the best PCB board possible. 
+2. if we had the PCB board, it would have been fun to test our gas sensor with our real code to see the result of all our work.
+3. it would also have been nice to develop our dashboard a little more (for example, implement the "Controls" module to control the sensor and the alarm).
+4. the cherry on top would also have been to develop an Android app to display and control our sensor module on our phone.
 
 ## Contacts <a name="p9"></a>
 
