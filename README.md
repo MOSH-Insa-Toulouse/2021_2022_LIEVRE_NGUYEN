@@ -136,7 +136,6 @@ void loop()
   delay(1000);
 }
 ```
-</details>
 
 You can find the codes:
 - [here for Tx](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_verte/Lora_Tx_mod2mod)
