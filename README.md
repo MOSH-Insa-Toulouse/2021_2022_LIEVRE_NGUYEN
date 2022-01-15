@@ -153,7 +153,7 @@ You can also find the codes:
 
 In this part, we implemented the full arduino code that retrieves and sends to TTN via LoraWAN the value of both the grove and AIME sensor. 
 We also read the raw value of the resistor (R_alu) that serves as a temperature sensor. By using the R_alu value, we then deduced the temperature.
-We also implemented a PID controller to maintain the temperature of the silicium resistor R_Poly to a temperature of 200°C. To do so, we use the PID controller to generate a duty cycle that is then entered as a parameter for the PWM signal that controls the silicium rod.
+We also implemented a PID controller to maintain the temperature of the silicium resistor R_Poly to a temperature of 200°C. To do so, we use the PID controller to generate a duty cycle that is then entered as a parameter for the PWM signal that controls the silicium rod that serves as R_poly.
 
 <img src="/Documents/Pictures/pid_control.png" height="400"> <br>
 
@@ -477,7 +477,7 @@ You can find the datasheet [here](https://github.com/MOSH-Insa-Toulouse/2021_202
 
 Of course, there are a few improvements that could be done to this project:
 
-1. we are sad not to have been able to really make the PCB board because we put a lot of time and work to create the best PCB board possible. 
+1. we are a bit disappointed not to have been able to really make the PCB board because we put a lot of time and work to create the best PCB board possible. 
 2. if we had the PCB board, it would have been fun to test our gas sensor with our real code to see the result of all our work.
 3. it would also have been nice to develop our dashboard a little more (for example, implement the "Controls" module to control the sensor and the alarm).
 4. the cherry on top would also have been to develop an Android app to display and control our sensor module on our phone.
