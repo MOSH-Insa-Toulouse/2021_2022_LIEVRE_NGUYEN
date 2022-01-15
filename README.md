@@ -1,6 +1,6 @@
 # 2021_2022_LIEVRE_NGUYEN
 This project is part of the 5ISS year formation at INSA Toulouse. We created a nanoparticle gas sensor in the AIME laboratory at INSA Toulouse.
-Then, we designed the PCB and the code to use the sensor and display its data on a dashboard.
+Then, we designed the PCB and the code to use the sensor with a  and display its data on a dashboard.
 
 ## SOMMAIRE 
 1. [Introduction](#intro)
@@ -452,7 +452,7 @@ Finally, we designed the PCB. Here, you have a picture of the schematics and the
 
 ## Node-RED <a name="p6"></a>
 
-Finally, we needed a dashboard to display the data andthe controls of the sensor. For that, we used to code in the LoRa part because since we didn't have the AIME sensor, we could only use the grove sensor.
+Finally, we needed a dashboard to display the data and the controls of the sensor. For that, we used to code in the LoRa part because since we didn't have the AIME sensor, we could only use the grove sensor.
 Here is a screenshot of the dashboard we created :
 
 ![NODERED_dashboard_ok](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/blob/main/Documents/Pictures/NODERED_dashboard_ok.PNG)
