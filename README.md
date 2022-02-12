@@ -146,8 +146,8 @@ You can find the code below:
 </details>
 
 You can also find the codes:
-- [here for Tx](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_verte/Lora_Tx_mod2mod)
-- [here for Rx](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_verte/Lora_Rx_mod2mod)
+- [here for Tx](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_verte/Lora_Tx_mod2mod.ino)
+- [here for Rx](https://github.com/MOSH-Insa-Toulouse/2021_2022_LIEVRE_NGUYEN/tree/main/Piste_verte/Lora_Rx_mod2mod.ino)
 
 ## LoraWAN <a name="p3"></a>
 
